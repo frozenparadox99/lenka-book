@@ -23,7 +23,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ initialValue, onChange }) => {
 
   const onFormatClick = () => {
     // get current value from editor
-    const unformatted = editorRef.current.getModel().getValue;
+    const unformatted = editorRef.current.getModel().getValue();
     // format that value
     const formatted = prettier
       .format(unformatted, {
